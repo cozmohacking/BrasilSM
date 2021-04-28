@@ -1,0 +1,17 @@
+# BrasilSM
+
+
+
+
+###################################################
+
+
+Script Criado Por Cozmo
+
+
+SEM VIOLENCIA NO BRASIL!!  #SM = Sem Violencia!!
+
+
+
+
+###################################################
